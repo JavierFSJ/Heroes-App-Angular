@@ -16,7 +16,7 @@ const routes : Routes = [
       {path: 'heroe/:id' , component: HeroeComponent},
       {path: 'buscar' , component: BuscarComponent},
       {path: 'agregar' , component: AgregarComponent},
-      {path: 'editar/:id', component: HeroeEditarComponent},
+      {path: 'editar/:id', component: AgregarComponent},
       {path: '**' , redirectTo:'list'}
     ]
   }
