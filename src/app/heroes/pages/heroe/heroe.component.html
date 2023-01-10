@@ -1,0 +1,55 @@
+<mat-grid-list cols="1" *ngIf="!heroe ;else heroeTemplate" >
+  <mat-grid-tile>
+    <mat-spinner></mat-spinner>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
+<ng-template #heroeTemplate>
+  <div fxLayout="row"
+       fxLayout.xs="column"
+       fxLayoutGap="30px">
+
+    <div fxFlex="50">
+      <h1>{{heroe.superhero}} <small> {{heroe.alter_ego}}</small></h1>
+      <mat-divider></mat-divider>
+      <br>
+      <img [src]="heroe | imagen" alt="">
+    </div>
+    <div fxFlex="50">
+      <h2>{{ heroe.publisher }}</h2>
+      <mat-divider></mat-divider>
+      <mat-list dense>
+          <mat-list-item>
+              {{heroe.superhero}}
+          </mat-list-item>
+          <mat-list-item>
+              {{heroe.first_appearance}}
+          </mat-list-item>
+          <mat-list-item>
+              {{heroe.alter_ego}}
+          </mat-list-item>
+          <mat-list-item>
+              {{heroe.publisher}}
+          </mat-list-item>
+          <mat-list-item>
+              {{heroe.characters}}
+          </mat-list-item>
+      </mat-list>
+      <br>
+      <br>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident libero similique aperiam adipisci, omnis dolore aspernatur expedita veritatis nisi eius iure odit alias facilis. Nam nostrum illo aliquam iusto error.</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, dolore aperiam maxime architecto tenetur assumenda, voluptatem quisquam consequuntur, ratione dolorem libero iure obcaecati praesentium. Excepturi eaque aliquid consequuntur neque culpa.</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet consectetur voluptatum, quidem amet perferendis alias. Rerum accusamus optio voluptas eos facere cum odit sed. Totam quae ducimus consequatur earum cupiditate expedita sunt error fuga labore, placeat, beatae quasi distinctio! Modi impedit, molestiae hic ad quam quibusdam laborum tempora magni molestias nisi corrupti eaque non rem consequuntur alias, eius quasi provident amet veniam asperiores iure, similique sit! Repudiandae saepe laboriosam animi vitae eaque, esse beatae distinctio consequatur nisi aliquid corrupti voluptates impedit alias quae exercitationem! Corrupti dignissimos voluptatibus, reprehenderit consectetur voluptate soluta repellendus iste officia ducimus. Veniam fugiat esse aliquid minima laudantium vel eos quod eaque voluptatibus doloribus eligendi, aliquam saepe! Voluptatibus ipsam nostrum eveniet? Beatae consequatur temporibus ipsam nisi vitae ab placeat fuga dicta eligendi doloremque velit deserunt recusandae consequuntur sint veniam tempore quisquam, expedita soluta.</p>
+      <div fxLayout="row" fxLayoutGap="30px">
+        <a routerLink="/heroes/list"  mat-raised-button color="warn">
+          Listado
+        </a>
+        <a [routerLink]="['/heroes/editar' , heroe.id]" mat-raised-button color="accent">
+          Editar
+        </a>
+      </div>
+    </div>
+  </div>
+
+</ng-template>

@@ -1,0 +1,19 @@
+<h1>Listado Heroes</h1>
+<hr>
+
+<div fxLayout="row wrap"
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="20px">
+
+  <div fxFlex="20"
+       fxFlex.lg="15"
+       fxFlex.sm="30"
+       *ngFor="let heroe of heroes">
+
+  <!-- Component Heroe -->
+  <app-hero-card [heroe]="heroe"></app-hero-card>
+  </div>
+</div>
+
+
