@@ -32,14 +32,6 @@
       "characters": "Jay Garrick, Barry Allen, Wally West, Bart Allen"
     },
     {
-      "id": "dc-green",
-      "superhero": "Green Lantern",
-      "publisher": "DC Comics",
-      "alter_ego": "Alan Scott",
-      "first_appearance": "All-American Comics #16",
-      "characters": "Alan Scott, Hal Jordan, Guy Gardner, John Stewart, Kyle Raynor, Jade, Sinestro, Simon Baz"
-    },
-    {
       "id": "dc-arrow",
       "superhero": "Green Arrow",
       "publisher": "DC Comics",
@@ -152,14 +144,6 @@
       "characters": "Clinton Francis Barton"
     },
     {
-      "id": "marvel-cyclops",
-      "superhero": "Cyclops",
-      "publisher": "Marvel Comics",
-      "alter_ego": "Scott Summers",
-      "first_appearance": "X-Men #1",
-      "characters": "Scott Summers"
-    },
-    {
       "id": "marvel-silver",
       "superhero": "Silver Surfer",
       "publisher": "Marvel Comics",
@@ -168,40 +152,13 @@
       "characters": "Norrin Radd"
     },
     {
-      "superhero": "Batman",
-      "alter_ego": "Color",
-      "first_appearance": "sdad",
-      "characters": "sdadsad",
-      "publisher": "DC - Comics",
-      "alt_img": "",
-      "id": "y5PjWRW"
-    },
-    {
-      "superhero": "Batman",
-      "alter_ego": "Color",
-      "first_appearance": "sdad",
-      "characters": "sdadsad",
-      "publisher": "DC - Comics",
-      "alt_img": "",
-      "id": "V4f9C9A"
-    },
-    {
-      "superhero": "Batman",
-      "alter_ego": "Color",
-      "first_appearance": "sdad",
-      "characters": "sdadsad",
-      "publisher": "DC - Comics",
-      "alt_img": "",
-      "id": "-3yVzK7"
-    },
-    {
-      "superhero": "Melvin",
-      "alter_ego": "Melcivn",
-      "first_appearance": "dhsjfdhk",
-      "characters": "fjdskjld",
-      "publisher": "Marvel - Comics",
-      "alt_img": "",
-      "id": "Te-kn6S"
+      "superhero": "DeathStroke",
+      "alter_ego": "DeathStroke",
+      "first_appearance": "Primer comic",
+      "characters": "Charles",
+      "publisher": "DC Comics",
+      "alt_img": "https://upload.wikimedia.org/wikipedia/en/e/e9/Deathstroke.png",
+      "id": "G5A_bWz"
     }
   ]
 }
