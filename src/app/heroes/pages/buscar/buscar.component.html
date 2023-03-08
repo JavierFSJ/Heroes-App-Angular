@@ -16,10 +16,10 @@
       <mat-autocomplete autoActiveFirstOption
                         #auto="matAutocomplete"
                         (optionSelected)="opcionSeleccionada( $event )">
-        <mat-option *ngFor="let heroe of heroes" [value]="heroe">
+        <mat-option *ngFor="let heroe of (heroesObs$ | async)" [value]="heroe">
           {{heroe.superhero}}
         </mat-option>
-        <mat-option value="" *ngIf="!heroes.length">
+        <mat-option value="" *ngIf="!(heroesObs$ | async)?.length">
             No existe ningun heroe {{termino}}
         </mat-option>
       </mat-autocomplete>
