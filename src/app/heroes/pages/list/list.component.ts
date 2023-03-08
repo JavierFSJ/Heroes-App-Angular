@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroesService } from '../../services/heroes.service';
 import { Heroe } from '../../interfaces/heroe.interface';
+import { Observable } from 'rxjs';
+import { ProgressBarService } from '../../../services/progress-bar.service';
 
 @Component({
   selector: 'app-list',
@@ -9,13 +11,14 @@ import { Heroe } from '../../interfaces/heroe.interface';
 })
 export class ListComponent implements OnInit {
 
-  heroes: Heroe[] = [];
+  heroesObs$ = new Observable<Heroe[]>;
 
-  constructor(private heroesServices: HeroesService) {}
+  constructor(private heroesServices: HeroesService,
+              private progressBarService:ProgressBarService) {}
 
   ngOnInit(): void {
-    this.heroesServices.getHeroes().subscribe( resp => {
-      this.heroes = resp;
-    });
+
+    this.heroesObs$ = this.progressBarService.showProgressBarUntilComplete(this.heroesServices.getHeroes());
+
   }
 }

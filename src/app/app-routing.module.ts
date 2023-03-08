@@ -4,11 +4,12 @@ import { ErrorPageComponent } from './shared/error-page/error-page.component';
 
 const routes: Routes = [
   /* Lazy load */
-  { path: 'auth' , loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule) },
-  { path: 'heroes' , loadChildren: () => import('./heroes/heroes.module').then( m => m.HeroesModule)},
+  { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
+  { path: 'heroes', loadChildren: () => import('./heroes/heroes.module').then(m => m.HeroesModule) },
   { path: '404', component: ErrorPageComponent },
+  { path: '' , redirectTo: 'auth' , pathMatch: 'full'},
   {
-    /* Con redirect no hace lleva el componente */
+    /* Con redirect no lleva el componente */
     path: '**',
     //component: ErrorPageComponent,
     redirectTo: '404',
@@ -19,4 +20,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

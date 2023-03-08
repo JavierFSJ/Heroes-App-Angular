@@ -13,6 +13,7 @@ import { ImagenPipe } from './pipes/imagen.pipe';
 import { HeroeEditarComponent } from './pages/heroe-editar/heroe-editar.component';
 import { FormsModule } from '@angular/forms';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { ProgressBarComponent } from '../shared/progress-bar/progress-bar.component';
 
 
 
@@ -35,6 +36,7 @@ import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dial
     FlexLayoutModule,
     FormsModule,
     MaterialModule,
+    ProgressBarComponent,
   ]
 })
 export class HeroesModule { }

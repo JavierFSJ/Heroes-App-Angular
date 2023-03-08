@@ -9,7 +9,7 @@
   <div fxFlex="20"
        fxFlex.lg="15"
        fxFlex.sm="30"
-       *ngFor="let heroe of heroes">
+       *ngFor="let heroe of (heroesObs$ | async)">
 
   <!-- Component Heroe -->
   <app-hero-card [heroe]="heroe"></app-hero-card>

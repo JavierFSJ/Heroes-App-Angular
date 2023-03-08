@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Heroe } from '../interfaces/heroe.interface';
-import { Observable } from 'rxjs';
+import { Observable, delay, shareReplay } from 'rxjs';
 import { environment } from '../../../environments/environment';
 
 
@@ -17,6 +17,9 @@ export class HeroesService {
 
   getHeroes(): Observable<Heroe[]>{
     return this.http.get<Heroe[]>(`${this.baseUrl}/heroes`)
+              .pipe(
+                shareReplay()
+              )
   }
 
   getHeroe( id: string): Observable<Heroe>{
